@@ -16,7 +16,7 @@ $lightStatus  = $sql->real_escape_string($_POST['lightStatus']);
 $waterHeaterStatus  = $sql->real_escape_string($_POST['waterHeaterStatus']);
  
 /* build the query, we'll use an insert this time */
-$query = "INSERT INTO `redyett1_test`.`tempLog` (`timeStamp`, `coopTemp`, `runTemp`, `doorStatus`, `photocellStatus`, `heatStatus`, `fanStatus`, `lightStatus`, `waterHeaterStatus`) VALUES (CURRENT_TIMESTAMP,'".$temp1."','".$temp2."', '".$doorStatus."','".$photocellStatus."','".$heatStatus."','".$fanStatus."','".$lightStatus."','".$waterHeaterStatus."')";
+$query = "INSERT INTO `yourdatabase`.`tempLog` (`timeStamp`, `coopTemp`, `runTemp`, `doorStatus`, `photocellStatus`, `heatStatus`, `fanStatus`, `lightStatus`, `waterHeaterStatus`) VALUES (CURRENT_TIMESTAMP,'".$temp1."','".$temp2."', '".$doorStatus."','".$photocellStatus."','".$heatStatus."','".$fanStatus."','".$lightStatus."','".$waterHeaterStatus."')";
  
 /* execute the query, nice and simple */
 $sql->query($query) or die($query.'<br />'.$sql->error);
